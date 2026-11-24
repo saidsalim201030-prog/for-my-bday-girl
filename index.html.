@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Girl 💗</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Georgia, serif;
+  background: linear-gradient(135deg, #ffe0ec, #fff0f5, #f8c8dc);
+  color: #a83e6e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255,255,255,.75);
+  padding: 30px 22px;
+  border-radius: 25px;
+  box-shadow: 0 10px 35px #d88aa844;
+}
+
+h1 { font-size: 28px; }
+p { line-height: 1.7; }
+
+input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #e9a4c1;
+  border-radius: 12px;
+  font-size: 17px;
+  text-align: center;
+  margin: 12px 0;
+  outline: none;
+}
+
+button {
+  border: none;
+  background: #e77da8;
+  color: white;
+  padding: 13px 22px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover { background: #cf6191; }
+
+.hidden { display: none; }
+
+.envelope {
+  position: relative;
+  width: 190px;
+  height: 125px;
+  background: #f5a9c6;
+  margin: 45px auto 25px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform .3s;
+}
+
+.envelope:hover { transform: scale(1.05); }
+
+.envelope:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-left: 95px solid transparent;
+  border-right: 95px solid transparent;
+  border-top: 75px solid #e77da8;
+  transform-origin: top;
+  transition: transform .5s;
+  z-index: 3;
+}
+
+.envelope.open:before {
+  transform: rotateX(180deg);
+}
+
+.envelope:after {
+  content: "💗";
+  position: absolute;
+  top: 45px;
+  left: 82px;
+  font-size: 28px;
+  z-index: 4;
+}
+
+.letter {
+  background: #fff8fb;
+  border-radius: 16px;
+  padding: 22px;
+  margin-top: 20px;
+  line-height: 1.8;
+  animation: appear .8s ease;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.small { font-size: 13px; }
+</style>
+</head>
+
+<body>
+
+<div class="container" id="login">
+  <h1>A little surprise for you 💌</h1>
+  <p>Heyyy Moluyyhh! Someone has something special for you ♡</p>
+  <p>But first... you need the secret password.</p>
+
+  <input id="password" type="password"
+         placeholder="Enter the secret word">
+
+  <button onclick="unlock()">Unlock my surprise 💗</button>
+  <p id="error" class="small"></p>
+</div>
+
+<div class="container hidden" id="surprise">
+  <h1>For my Moluyyhh 💗</h1>
+  <p>My girl, a little something made just for you...</p>
+
+  <h2>💌</h2>
+  <p>Tap the envelope to open your letter!</p>
+
+  <div class="envelope" id="envelope"
+       onclick="openLetter()"></div>
+
+  <p class="small">Made with love, just for you ♡</p>
+
+  <div class="letter hidden" id="letter">
+    <h2>Heyyy Vavee Ponneyhh! 💗</h2>
+
+    <p>
+      Happy Birthday, my girl! 🎂
+      I made this little surprise just for you.
+      I hope your day is filled with happiness,
+      laughter and all the beautiful things
+      you deserve.
+    </p>
+
+    <p>
+      You are someone very special to me,
+      Moluyyhh. Never forget that. 💕
+    </p>
+
+    <h3>Happy Birthdayyy! 💗</h3>
+    <p>With lots of love ♡</p>
+  </div>
+</div>
+
+<script>
+function unlock() {
+  const pass = document.getElementById("password").value;
+
+  if (pass === "said") {
+    document.getElementById("login").classList.add("hidden");
+    document.getElementById("surprise").classList.remove("hidden");
+  } else {
+    document.getElementById("error").textContent =
+      "Oops! That's not the secret word 💗";
+  }
+}
+
+function openLetter() {
+  document.getElementById("envelope").classList.add("open");
+  document.getElementById("letter").classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
