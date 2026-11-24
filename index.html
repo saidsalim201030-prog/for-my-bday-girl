@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For My Birthday Girl 💗</title>
+<title>For My Dearest Vavveyhh 💗</title>
 
 <style>
 * {
@@ -13,350 +13,248 @@
 
 body {
     margin: 0;
-    min-height: 100vh;
-    font-family: Georgia, serif;
-    background: linear-gradient(135deg,#ffd6e7,#ffeaf2,#ffc4dc);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow-x: hidden;
-    color: #8e3b60;
-}
-
-.card {
-    background: rgba(255,255,255,.92);
-    width: 90%;
-    max-width: 430px;
-    padding: 28px 20px;
-    border-radius: 25px;
+    font-family: 'Trebuchet MS', sans-serif;
+    background: linear-gradient(135deg, #ffe0ed, #ffd1dc, #fff0f5);
+    color: #8b3a59;
     text-align: center;
-    box-shadow: 0 10px 35px rgba(180,70,120,.2);
-    position: relative;
-    z-index: 2;
-    margin: 25px 0;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
-h1 { color:#d94f87; font-size:27px; }
-h2 { color:#d94f87; }
-p { font-size:16px; line-height:1.8; }
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 35px auto;
+    padding: 25px 20px;
+    background: rgba(255,255,255,0.88);
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(180,80,120,0.15);
+}
+
+h1 {
+    color: #d94f83;
+    font-size: 27px;
+}
+
+h2 {
+    color: #d94f83;
+}
+
+p {
+    line-height: 1.7;
+    font-size: 16px;
+}
 
 button {
-    background:#e879a7;
-    color:white;
-    border:none;
-    padding:12px 23px;
-    border-radius:25px;
-    font-size:16px;
-    cursor:pointer;
-    margin:7px;
-    transition:.3s;
+    border: none;
+    background: #ec78a5;
+    color: white;
+    padding: 13px 22px;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 10px 5px;
+    box-shadow: 0 4px 10px rgba(200,70,120,0.2);
 }
 
 button:hover {
-    background:#d94f87;
-    transform:scale(1.04);
+    background: #d9578b;
 }
 
 input {
-    width:85%;
-    padding:13px;
-    border:2px solid #f3a4c4;
-    border-radius:20px;
-    text-align:center;
-    font-size:16px;
-    margin:15px 0;
+    padding: 12px;
+    border: 2px solid #f2a4c1;
+    border-radius: 20px;
+    outline: none;
+    text-align: center;
+    font-size: 16px;
+    width: 75%;
+    max-width: 250px;
 }
 
-.hidden { display:none !important; }
+.hidden {
+    display: none;
+}
 
-/* ENVELOPE */
+.section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px dashed #f1a6c1;
+}
 
-.envelope-area {
-    margin:35px auto 20px;
-    width:220px;
-    height:145px;
-    position:relative;
-    cursor:pointer;
-    perspective:800px;
+.photo {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 20px;
+    margin-top: 15px;
+    box-shadow: 0 5px 18px rgba(180,80,120,0.2);
 }
 
 .envelope {
-    position:absolute;
-    width:100%;
-    height:100%;
-    background:#f6a9c8;
-    border-radius:8px;
+    font-size: 75px;
+    cursor: pointer;
+    margin: 15px;
+    transition: transform 0.3s;
 }
 
-.envelope::before {
-    content:"";
-    position:absolute;
-    bottom:0;
-    left:0;
-    border-left:110px solid #f8c0d5;
-    border-right:110px solid #f8c0d5;
-    border-top:75px solid transparent;
-    z-index:2;
+.envelope:hover {
+    transform: scale(1.1);
 }
-
-.flap {
-    position:absolute;
-    top:0;
-    border-left:110px solid transparent;
-    border-right:110px solid transparent;
-    border-top:85px solid #e879a7;
-    transform-origin:top;
-    transition:.7s;
-    z-index:3;
-}
-
-.seal {
-    position:absolute;
-    top:55px;
-    left:50%;
-    transform:translateX(-50%);
-    background:#d94f87;
-    color:white;
-    width:35px;
-    height:35px;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    z-index:4;
-}
-
-.envelope.open .flap {
-    transform:rotateX(180deg);
-}
-
-/* LETTER */
 
 .letter {
-    background:#fff5f8;
-    border:1px solid #f4b5cc;
-    border-radius:18px;
-    padding:22px 17px;
-    margin-top:25px;
-    animation:appear 1s ease;
+    background: #fff2f7;
+    border-radius: 18px;
+    padding: 20px;
+    margin-top: 15px;
+    line-height: 1.8;
+    animation: appear 0.8s ease;
 }
 
 @keyframes appear {
-    from { opacity:0; transform:translateY(15px); }
-    to { opacity:1; transform:translateY(0); }
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
 }
-
-/* PHOTO REVEAL */
-
-.photo-section,.party-section {
-    margin-top:35px;
-    padding-top:20px;
-    border-top:1px dashed #f3a4c4;
-}
-
-.photo-frame {
-    margin:25px auto;
-    padding:8px;
-    max-width:280px;
-    background:white;
-    border:3px solid #f3a4c4;
-    border-radius:20px;
-    box-shadow:0 8px 25px rgba(217,79,135,.25);
-}
-
-.photo-frame img {
-    width:100%;
-    display:block;
-    border-radius:14px;
-}
-
-.photo-reveal-animation {
-    animation:photoAppear 1.2s ease;
-}
-
-@keyframes photoAppear {
-    from { opacity:0; transform:scale(.65) rotate(-5deg); }
-    to { opacity:1; transform:scale(1) rotate(0); }
-}
-
-.birthday-text {
-    animation:glow 2s infinite alternate;
-}
-
-@keyframes glow {
-    from { text-shadow:0 0 5px #ffc1d9; }
-    to { text-shadow:0 0 18px #e879a7; }
-}
-
-.big-heart {
-    font-size:45px;
-    animation:heartbeat 1s infinite;
-}
-
-@keyframes heartbeat {
-    0%,100% { transform:scale(1); }
-    50% { transform:scale(1.2); }
-}
-
-/* CAKE */
-
-.cake-stage {
-    margin:25px auto;
-    height:190px;
-    display:flex;
-    justify-content:center;
-    align-items:flex-end;
-    position:relative;
-}
-
-.cake {
-    position:relative;
-    width:190px;
-    height:105px;
-    background:linear-gradient(#ffb8d1 0 35%,#d879a4 35% 100%);
-    border-radius:12px 12px 18px 18px;
-    box-shadow:0 9px 0 #b95883;
-    transition:.7s;
-}
-
-.cake-top {
-    position:absolute;
-    width:100%;
-    height:32px;
-    top:-12px;
-    left:0;
-    background:#fff0f6;
-    border-radius:50%;
-    border:3px solid #f5a5c4;
-}
-
-.cake-top::after {
-    content:"";
-    position:absolute;
-    left:25px;
-    top:13px;
-    width:10px;
-    height:18px;
-    background:#e879a7;
-    border-radius:0 0 10px 10px;
-    box-shadow:
-      35px 0 #e879a7,
-      70px 0 #e879a7,
-      105px 0 #e879a7;
-}
-
-.candle {
-    position:absolute;
-    width:10px;
-    height:35px;
-    background:repeating-linear-gradient(
-      45deg,#fff 0 5px,#e879a7 5px 10px
-    );
-    top:-48px;
-    border-radius:3px;
-    z-index:3;
-}
-
-.candle:nth-child(2) { left:45px; }
-.candle:nth-child(3) { left:90px; }
-.candle:nth-child(4) { left:135px; }
-
-.flame {
-    position:absolute;
-    top:-17px;
-    left:1px;
-    width:9px;
-    height:15px;
-    background:#ffb52e;
-    border-radius:50% 50% 50% 50%;
-    opacity:0;
-    transform:scale(0);
-    transition:.3s;
-}
-
-.flame.lit {
-    opacity:1;
-    transform:scale(1);
-    animation:flicker .5s infinite alternate;
-}
-
-@keyframes flicker {
-    from { transform:scale(1) rotate(-5deg); }
-    to { transform:scale(1.15) rotate(5deg); }
-}
-
-.cake-cut {
-    display:flex;
-    gap:7px;
-    justify-content:center;
-    align-items:flex-end;
-    animation:appear .8s ease;
-}
-
-.cake-slice {
-    width:53px;
-    height:90px;
-    background:linear-gradient(#fff0f6 0 20%,#ffb8d1 20% 42%,#d879a4 42% 100%);
-    border-radius:10px 10px 5px 5px;
-    border-bottom:6px solid #b95883;
-    animation:sliceIn .7s ease;
-}
-
-@keyframes sliceIn {
-    from { opacity:0; transform:translateY(-25px) rotate(-10deg); }
-    to { opacity:1; transform:translateY(0) rotate(0); }
-}
-
-/* BEROTTA */
-
-.berotta-frame {
-    max-width:270px;
-    margin:20px auto;
-    border:4px solid #f3a4c4;
-    border-radius:20px;
-    padding:7px;
-    background:white;
-    box-shadow:0 8px 20px rgba(217,79,135,.2);
-    transition:.4s;
-}
-
-.berotta-frame img {
-    width:100%;
-    display:block;
-    border-radius:14px;
-}
-
-.berotta-frame.eaten {
-    animation:eat .6s forwards;
-}
-
-@keyframes eat {
-    to {
-        opacity:0;
-        transform:scale(.2) rotate(20deg);
-    }
-}
-
-.food-message {
-    color:#d94f87;
-    font-weight:bold;
-    min-height:25px;
-}
-
-/* FLOATING HEARTS */
 
 .heart {
-    position:fixed;
-    bottom:-20px;
-    animation:floatUp 6s linear forwards;
-    pointer-events:none;
-    z-index:1;
+    position: fixed;
+    bottom: -30px;
+    animation: floatUp 7s linear infinite;
+    pointer-events: none;
+    z-index: 0;
 }
 
 @keyframes floatUp {
-    0% { transform:translateY(0) rotate(0); opacity:0; }
-    15% { opacity:.8; }
-    100% { transform:translateY(-110vh) rotate(360deg); opacity:0; }
+    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    15% { opacity: 0.8; }
+    100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+}
+
+/* Cake */
+.cake-area {
+    margin: 25px auto;
+    min-height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.cake {
+    position: relative;
+    width: 190px;
+    height: 100px;
+    background: #f3a4bd;
+    border-radius: 15px 15px 12px 12px;
+    border-bottom: 12px solid #d9799d;
+    box-shadow: 0 8px 0 #c9678c;
+    transition: all 0.5s;
+}
+
+.cake-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background: #fff0f5;
+    border-radius: 15px 15px 8px 8px;
+}
+
+.candle {
+    position: absolute;
+    bottom: 100px;
+    width: 10px;
+    height: 38px;
+    background: repeating-linear-gradient(
+        45deg,
+        #fff 0px,
+        #fff 5px,
+        #f38db1 5px,
+        #f38db1 10px
+    );
+    border-radius: 4px;
+}
+
+.candle:nth-child(2) { left: 45px; }
+.candle:nth-child(3) { left: 90px; }
+.candle:nth-child(4) { left: 135px; }
+
+.flame {
+    position: absolute;
+    top: -17px;
+    left: 1px;
+    width: 8px;
+    height: 14px;
+    background: orange;
+    border-radius: 50% 50% 50% 50%;
+    box-shadow: 0 0 12px #ffb347;
+    display: none;
+    animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+    from { transform: scale(1) rotate(-5deg); }
+    to { transform: scale(1.15) rotate(5deg); }
+}
+
+.cake-cut {
+    display: none;
+    gap: 5px;
+    justify-content: center;
+    align-items: end;
+}
+
+.slice {
+    width: 55px;
+    height: 75px;
+    background: #f3a4bd;
+    border-bottom: 9px solid #d9799d;
+    border-radius: 10px;
+    clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%);
+}
+
+.slice:nth-child(2) {
+    transform: translateY(-12px);
+}
+
+.cake-gone {
+    display: none;
+    font-size: 50px;
+}
+
+/* Berotta */
+.berotta-img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 18px;
+    margin: 15px auto;
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+.berotta-gone {
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+/* Bruno */
+.bruno-photo {
+    width: 100%;
+    max-width: 440px;
+    border-radius: 22px;
+    margin-top: 15px;
+    box-shadow: 0 6px 20px rgba(180,80,120,0.2);
+}
+
+.bruno-caption {
+    font-size: 18px;
+    color: #d94f83;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.footer {
+    margin-top: 35px;
+    font-size: 20px;
+    color: #d94f83;
 }
 
 </style>
@@ -364,104 +262,74 @@ input {
 
 <body>
 
-<!-- PASSWORD -->
-
-<div class="card" id="passwordScreen">
-
+<!-- PASSWORD SCREEN -->
+<div class="container" id="passwordScreen">
     <h1>My dearest Vavveyhh 💗</h1>
+    <p>A little surprise is waiting for you...</p>
+    <p>Enter your secret password 💌</p>
 
-    <p>
-        Someone has prepared something special just for you...
-        <br>
-        But first, you need the secret password ♡
-    </p>
-
-    <input type="password" id="password"
-           placeholder="Enter the secret password">
-
+    <input type="password" id="password" placeholder="Your password">
     <br>
+    <button onclick="unlock()">Unlock my surprise 💗</button>
 
-    <button onclick="unlock()">Unlock 💗</button>
-
-    <p id="error"></p>
-
+    <p id="error" style="color:#d94f83;"></p>
 </div>
 
 
-<!-- MAIN SURPRISE -->
-
-<div class="card hidden" id="surpriseScreen">
+<!-- MAIN WEBSITE -->
+<div class="container hidden" id="mainContent">
 
     <h1>My dearest Vavveyhh 💗</h1>
-
     <p>Welcome to your little surprise, my girl!</p>
-    <p>A little something made especially for you ♡</p>
 
-    <!-- ENVELOPE -->
+    <!-- LETTER -->
+    <div class="section">
+        <h2>A little letter for you 💌</h2>
+        <p>Tap the envelope to open your letter</p>
 
-    <div class="envelope-area" onclick="openLetter()">
-        <div class="envelope" id="envelope">
-            <div class="flap"></div>
-            <div class="seal">♥</div>
+        <div class="envelope" onclick="openLetter()">💌</div>
+
+        <div class="letter hidden" id="letter">
+            <h2>Happy Birthdayyy! 🎂💗</h2>
+
+            <h3>My dearest Vavveyhh 💗</h3>
+
+            <p>
+                Happiest birthday to my girl! I made this little
+                surprise especially for you, hoping it brings a
+                big smile to your face.
+            </p>
+
+            <p>
+                You are so special to me, and I hope your birthday
+                is filled with happiness, laughter and beautiful
+                memories.
+            </p>
+
+            <p>
+                Keep smiling, keep being you, and never forget
+                how special you are to me. 😁
+            </p>
+
+            <h3>Happy Birthday, my girl! 💕</h3>
+            <p>With lots of love ♡</p>
         </div>
     </div>
 
-    <p>Tap the envelope to open your letter 💌</p>
 
-    <!-- LETTER -->
-
-    <div class="letter hidden" id="letter">
-
-        <h1>Happy Birthdayyy! 🎂💗</h1>
-
-        <p>My dearest Vavveyhh 💗</p>
-
-        <p>
-            Happiest birthday to my girl! I made this little
-            surprise especially for you, hoping it brings
-            a big smile to your face.
-        </p>
-
-        <p>
-            You are so special to me, and I hope your birthday
-            is filled with happiness, laughter and beautiful memories.
-        </p>
-
-        <p>
-            Keep smiling, keep being you, and never forget
-            how special you are to me. 😁
-        </p>
-
-        <p>Happy Birthday, my girl! 💕</p>
-
-        <p>With lots of love ♡</p>
-
-    </div>
-
-
-    <!-- PHOTO REVEAL -->
-
-    <div class="photo-section">
-
-        <h2>One more little surprise 💗</h2>
-
-        <p>There's someone very special I want you to see...</p>
+    <!-- HER PHOTO -->
+    <div class="section">
+        <h2>A little surprise for you 💗</h2>
 
         <button onclick="revealPhoto()">
             Tap to reveal your picture 💌
         </button>
 
         <div id="photoReveal" class="hidden">
+            <img src="vavveyhh.jpg" alt="A special picture" class="photo">
 
-            <div class="photo-frame photo-reveal-animation">
-                <img src="vavveyhh.jpg" alt="My dearest Vavveyhh">
-            </div>
-
-            <h1 class="birthday-text">
-                Happy b'dayhh my lovee! 💗
-            </h1>
-
-            <h2>My dearest Vavveyhh 💗</h2>
+            <h2>Happy b'dayhh my lovee! 💗</h2>
+            <h3>My dearest Vavveyhh 💗</h3>
 
             <p>
                 No matter where life takes us, I hope we keep
@@ -473,28 +341,47 @@ input {
                 Here's to us, today and always.
                 Our love story has no ending. ♾️💗
             </p>
-
-            <div class="big-heart">💗</div>
-
         </div>
     </div>
 
 
-    <!-- BIRTHDAY CAKE PARTY -->
-
-    <div class="party-section">
-
-        <h1>Nowww it's cake timeee! 🎂</h1>
+    <!-- BRUNO SECTION -->
+    <div class="section">
+        <h2>And someone special too! 🐶💗</h2>
 
         <p>
-            Every birthday girl deserves a cake!
-            This one's specially for you 💗
+            A special little moment with you and Bruno!
         </p>
 
-        <div class="cake-stage" id="cakeStage">
+        <button onclick="showBruno()">
+            Meet Bruno! 🐾
+        </button>
+
+        <div id="brunoReveal" class="hidden">
+            <img src="bruno.jpg"
+                 alt="Vavveyhh and Bruno"
+                 class="bruno-photo">
+
+            <p class="bruno-caption">
+                Two of my favourite souls in one picture. 💗🐾
+            </p>
+
+            <p>
+                Bruno is lucky to have you, and this little
+                moment deserves a special place here! 🥹
+            </p>
+        </div>
+    </div>
+
+
+    <!-- CAKE SECTION -->
+    <div class="section">
+        <h2>Time for your birthday cake! 🎂</h2>
+        <p>Every birthday needs a cake, right? 😋</p>
+
+        <div class="cake-area">
 
             <div class="cake" id="wholeCake">
-
                 <div class="cake-top"></div>
 
                 <div class="candle">
@@ -508,97 +395,54 @@ input {
                 <div class="candle">
                     <div class="flame"></div>
                 </div>
-
             </div>
 
-            <div class="cake-cut hidden" id="cakeSlices">
-                <div class="cake-slice"></div>
-                <div class="cake-slice"></div>
-                <div class="cake-slice"></div>
+            <div class="cake-cut" id="cakeSlices">
+                <div class="slice"></div>
+                <div class="slice"></div>
+                <div class="slice"></div>
             </div>
 
+            <div class="cake-gone" id="cakeGone">🍰</div>
         </div>
 
-        <p id="cakeMessage" class="food-message">
-            First, light your birthday candles! 🕯️
-        </p>
+        <button onclick="lightCandles()">Light the candles 🕯️</button>
+        <button onclick="cutCake()">Cut your cake! 🔪</button>
+        <button onclick="eatCake()">Eat your cake! 😋</button>
 
-        <button id="lightButton" onclick="lightCandles()">
-            Light the candles 🕯️
-        </button>
-
-        <button id="cutButton" class="hidden" onclick="cutCake()">
-            Cut your cake! 🔪
-        </button>
-
-        <button id="eatCakeButton" class="hidden" onclick="eatCake()">
-            Eat your cake! 😋
-        </button>
-
-        <p id="cakeFinished" class="hidden">
-            YAYYY! Hope you enjoyed your cakeee! 💗🍰
-        </p>
-
+        <p id="cakeMessage"></p>
     </div>
 
 
-    <!-- BEROTTA TIME -->
+    <!-- BEROTTA SECTION -->
+    <div class="section">
+        <h2>And now... something delicious! 😋</h2>
 
-    <div class="party-section">
+        <p>Your special birthday berottaaa! 💗</p>
 
-        <h1>WAITTTT!! 😂💗</h1>
+        <img src="berotta.jpg" alt="Birthday berotta"
+             class="berotta-img" id="berotta">
 
-        <h2>It's BEROTTA TIME!!! 🫓</h2>
+        <p id="berottaMessage">Tap below to take a bite!</p>
 
-        <p>
-            I knowww this is your favouriteee!
-            How can I forget your BEROTTA? 😭💗
-        </p>
-
-        <p>
-            A special treat just for my birthday girl!
-        </p>
-
-        <div class="berotta-frame" id="berottaFrame">
-            <img src="berotta.jpg" alt="Special Berotta">
-        </div>
-
-        <p id="berottaMessage" class="food-message">
-            Your special berotta is readyyy! 😋
-        </p>
-
-        <button id="berottaButton" onclick="eatBerotta()">
-            Take a biteee! 😋
-        </button>
-
-        <p id="berottaFinished" class="hidden">
-            ALL GONEEEE!! 😂💗
-            <br>
-            Hope you enjoyed your berotta, my girl!
-        </p>
-
+        <button onclick="eatBerotta()">Take a bite! 😋</button>
     </div>
 
 
-    <!-- FINAL MESSAGE -->
-
-    <div class="party-section">
-
-        <h1>One last thing... 💗</h1>
+    <!-- ENDING -->
+    <div class="section">
+        <h2>One last thing... 💗</h2>
 
         <p>
-            Happy birthday once again, my dearest Vavveyhh.
-        </p>
-
-        <p>
-            No matter how many birthdays pass,
-            I hope we get to celebrate many more together.
+            I hope this little surprise made your day
+            a little more special.
         </p>
 
         <h2>Forever us ♾️💗</h2>
+    </div>
 
-        <div class="big-heart">💗</div>
-
+    <div class="footer">
+        Made with love ♡
     </div>
 
 </div>
@@ -607,206 +451,108 @@ input {
 <script>
 
 // PASSWORD
-
 function unlock() {
+    const entered = document.getElementById("password").value;
 
-    const password =
-        document.getElementById("password").value;
-
-    if (password.toLowerCase() === "said") {
-
-        document.getElementById("passwordScreen")
-            .classList.add("hidden");
-
-        document.getElementById("surpriseScreen")
-            .classList.remove("hidden");
-
+    if (entered === "said") {
+        document.getElementById("passwordScreen").classList.add("hidden");
+        document.getElementById("mainContent").classList.remove("hidden");
     } else {
-
         document.getElementById("error").innerText =
-            "Oops! That's not the right password 💗";
-
+            "Oops! Try the password again 💗";
     }
-
 }
 
 
-// OPEN LETTER
-
+// LETTER
 function openLetter() {
-
-    document.getElementById("envelope")
-        .classList.add("open");
-
-    setTimeout(function() {
-
-        document.getElementById("letter")
-            .classList.remove("hidden");
-
-    }, 500);
-
+    document.getElementById("letter").classList.toggle("hidden");
 }
 
 
-// REVEAL PHOTO
-
+// PHOTO
 function revealPhoto() {
-
-    const photo =
-        document.getElementById("photoReveal");
-
-    photo.classList.remove("hidden");
-
-    photo.scrollIntoView({
-        behavior:"smooth",
-        block:"center"
-    });
-
-    for (let i = 0; i < 20; i++) {
-        setTimeout(createHeart, i * 120);
-    }
-
+    document.getElementById("photoReveal").classList.remove("hidden");
 }
 
 
-// LIGHT CANDLES
+// BRUNO
+function showBruno() {
+    document.getElementById("brunoReveal").classList.remove("hidden");
+}
 
+
+// CAKE
 function lightCandles() {
-
-    const flames =
-        document.querySelectorAll(".flame");
-
-    flames.forEach(function(flame) {
-        flame.classList.add("lit");
+    document.querySelectorAll(".flame").forEach(flame => {
+        flame.style.display = "block";
     });
 
     document.getElementById("cakeMessage").innerText =
-        "YAYYY! Make a wish, birthday girl! 💗✨";
-
-    document.getElementById("lightButton")
-        .classList.add("hidden");
-
-    document.getElementById("cutButton")
-        .classList.remove("hidden");
-
-    for (let i = 0; i < 15; i++) {
-        setTimeout(createHeart, i * 100);
-    }
-
+        "Make a wish, birthday girl! ✨💗";
 }
-
-
-// CUT CAKE
 
 function cutCake() {
-
-    document.getElementById("wholeCake")
-        .classList.add("hidden");
-
-    document.getElementById("cakeSlices")
-        .classList.remove("hidden");
+    document.getElementById("wholeCake").style.display = "none";
+    document.getElementById("cakeSlices").style.display = "flex";
 
     document.getElementById("cakeMessage").innerText =
-        "Yummm! Your cake is ready! 🍰";
-
-    document.getElementById("cutButton")
-        .classList.add("hidden");
-
-    document.getElementById("eatCakeButton")
-        .classList.remove("hidden");
-
+        "Your cake is ready! 🎂";
 }
-
-
-// EAT CAKE
 
 function eatCake() {
+    document.getElementById("wholeCake").style.display = "none";
+    document.getElementById("cakeSlices").style.display = "none";
+    document.getElementById("cakeGone").style.display = "block";
 
-    document.getElementById("cakeSlices")
-        .classList.add("hidden");
-
-    document.getElementById("eatCakeButton")
-        .classList.add("hidden");
-
-    document.getElementById("cakeMessage")
-        .classList.add("hidden");
-
-    document.getElementById("cakeFinished")
-        .classList.remove("hidden");
-
-    for (let i = 0; i < 20; i++) {
-        setTimeout(createHeart, i * 100);
-    }
-
+    document.getElementById("cakeMessage").innerText =
+        "YAYYY! Hope you enjoyed your cakeee! 💗🍰";
 }
 
 
-// EAT BEROTTA
-
-let berottaBites = 0;
+// BEROTTA
+let bites = 0;
 
 function eatBerotta() {
+    if (bites >= 3) return;
 
-    berottaBites++;
+    bites++;
 
     const messages = [
-        "First biteee! 😋",
-        "Another bite for youuu! 💗",
-        "Last biteee! Yummm! 😂"
+        "First bite! Yummm! 😋",
+        "Another bite! It's disappearing! 💗",
+        "All goneee! Hope you enjoyed it! 😂💗"
     ];
 
-    document.getElementById("berottaMessage")
-        .innerText = messages[berottaBites - 1];
+    document.getElementById("berottaMessage").innerText =
+        messages[bites - 1];
 
-    if (berottaBites >= 3) {
+    if (bites === 3) {
+        const berotta = document.getElementById("berotta");
+        berotta.classList.add("berotta-gone");
 
-        document.getElementById("berottaFrame")
-            .classList.add("eaten");
-
-        document.getElementById("berottaButton")
-            .classList.add("hidden");
-
-        setTimeout(function() {
-
-            document.getElementById("berottaFrame")
-                .classList.add("hidden");
-
-            document.getElementById("berottaMessage")
-                .classList.add("hidden");
-
-            document.getElementById("berottaFinished")
-                .classList.remove("hidden");
-
-        }, 650);
-
+        setTimeout(() => {
+            berotta.style.display = "none";
+        }, 600);
     }
-
 }
 
 
 // FLOATING HEARTS
-
 function createHeart() {
-
     const heart = document.createElement("div");
-
     heart.className = "heart";
-    heart.innerHTML = "💗";
+    heart.innerHTML = ["💗", "💕", "💖", "💞"][Math.floor(Math.random() * 4)];
 
     heart.style.left = Math.random() * 100 + "vw";
-
-    heart.style.fontSize =
-        (15 + Math.random() * 20) + "px";
-
-    heart.style.animationDuration =
-        (4 + Math.random() * 4) + "s";
+    heart.style.fontSize = (15 + Math.random() * 20) + "px";
+    heart.style.animationDuration = (5 + Math.random() * 5) + "s";
 
     document.body.appendChild(heart);
 
-    setTimeout(function() {
+    setTimeout(() => {
         heart.remove();
-    }, 8000);
-
+    }, 10000);
 }
 
 setInterval(createHeart, 700);
@@ -815,6 +561,10 @@ setInterval(createHeart, 700);
 
 </body>
 </html>
+
+
+
+
 
 
 
