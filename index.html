@@ -7,14 +7,12 @@
 <title>For My Dearest Vavveyhh 💗</title>
 
 <style>
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     margin: 0;
     font-family: 'Trebuchet MS', sans-serif;
-    background: linear-gradient(135deg, #ffe0ed, #ffd1dc, #fff0f5);
+    background: linear-gradient(135deg,#ffe0ed,#ffd1dc,#fff0f5);
     color: #8b3a59;
     text-align: center;
     min-height: 100vh;
@@ -24,21 +22,15 @@ body {
 .container {
     width: 90%;
     max-width: 600px;
-    margin: 35px auto;
+    margin: 30px auto;
     padding: 25px 20px;
-    background: rgba(255,255,255,0.88);
+    background: rgba(255,255,255,.92);
     border-radius: 25px;
-    box-shadow: 0 8px 25px rgba(180,80,120,0.15);
+    box-shadow: 0 8px 25px rgba(180,80,120,.15);
 }
 
-h1 {
-    color: #d94f83;
-    font-size: 27px;
-}
-
-h2 {
-    color: #d94f83;
-}
+h1,h2 { color: #d94f83; }
+h1 { font-size: 27px; }
 
 p {
     line-height: 1.7;
@@ -49,17 +41,15 @@ button {
     border: none;
     background: #ec78a5;
     color: white;
-    padding: 13px 22px;
+    padding: 13px 20px;
     border-radius: 25px;
     font-size: 15px;
     cursor: pointer;
-    margin: 10px 5px;
-    box-shadow: 0 4px 10px rgba(200,70,120,0.2);
+    margin: 8px 5px;
+    box-shadow: 0 4px 10px rgba(200,70,120,.2);
 }
 
-button:hover {
-    background: #d9578b;
-}
+button:hover { background: #d9578b; }
 
 input {
     padding: 12px;
@@ -72,9 +62,7 @@ input {
     max-width: 250px;
 }
 
-.hidden {
-    display: none;
-}
+.hidden { display: none !important; }
 
 .section {
     margin-top: 30px;
@@ -82,24 +70,22 @@ input {
     border-top: 1px dashed #f1a6c1;
 }
 
-.photo {
+.photo,.bruno-photo {
     width: 100%;
-    max-width: 420px;
+    max-width: 430px;
     border-radius: 20px;
     margin-top: 15px;
-    box-shadow: 0 5px 18px rgba(180,80,120,0.2);
+    box-shadow: 0 5px 18px rgba(180,80,120,.2);
 }
 
 .envelope {
     font-size: 75px;
     cursor: pointer;
     margin: 15px;
-    transition: transform 0.3s;
+    transition: transform .3s;
 }
 
-.envelope:hover {
-    transform: scale(1.1);
-}
+.envelope:hover { transform: scale(1.1); }
 
 .letter {
     background: #fff2f7;
@@ -107,7 +93,7 @@ input {
     padding: 20px;
     margin-top: 15px;
     line-height: 1.8;
-    animation: appear 0.8s ease;
+    animation: appear .8s ease;
 }
 
 @keyframes appear {
@@ -115,6 +101,75 @@ input {
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* CAR JOURNEY */
+.car-scene {
+    position: relative;
+    height: 160px;
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 20px;
+    background: linear-gradient(#ffe9f1 65%,#f8c6d8 65%);
+}
+
+.road {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    background: #bca5b1;
+}
+
+.road:after {
+    content: "";
+    position: absolute;
+    top: 21px;
+    left: 0;
+    width: 100%;
+    border-top: 3px dashed white;
+}
+
+.car {
+    position: absolute;
+    left: 50%;
+    bottom: 27px;
+    transform: translateX(-50%);
+    font-size: 65px;
+    z-index: 2;
+}
+
+.car.drive-away {
+    animation: driveAway 2s forwards ease-in;
+}
+
+.car.drive-home {
+    animation: driveHome 2s forwards ease-in;
+}
+
+@keyframes driveAway {
+    0% { left: 50%; transform: translateX(-50%); }
+    100% { left: 130%; transform: translateX(0); }
+}
+
+@keyframes driveHome {
+    0% { left: -30%; transform: scaleX(-1); }
+    100% { left: 50%; transform: scaleX(-1) translateX(50%); }
+}
+
+.cloud {
+    position: absolute;
+    top: 15px;
+    font-size: 28px;
+}
+
+.cloud.one { left: 15%; }
+.cloud.two { right: 15%; }
+
+.house {
+    font-size: 75px;
+    margin: 10px;
+}
+
+/* HEARTS */
 .heart {
     position: fixed;
     bottom: -30px;
@@ -124,12 +179,12 @@ input {
 }
 
 @keyframes floatUp {
-    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
-    15% { opacity: 0.8; }
+    0% { transform: translateY(0) rotate(0); opacity: 0; }
+    15% { opacity: .8; }
     100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
 }
 
-/* Cake */
+/* CAKE */
 .cake-area {
     margin: 25px auto;
     min-height: 180px;
@@ -146,7 +201,6 @@ input {
     border-radius: 15px 15px 12px 12px;
     border-bottom: 12px solid #d9799d;
     box-shadow: 0 8px 0 #c9678c;
-    transition: all 0.5s;
 }
 
 .cake-top {
@@ -165,11 +219,7 @@ input {
     width: 10px;
     height: 38px;
     background: repeating-linear-gradient(
-        45deg,
-        #fff 0px,
-        #fff 5px,
-        #f38db1 5px,
-        #f38db1 10px
+        45deg,#fff 0px,#fff 5px,#f38db1 5px,#f38db1 10px
     );
     border-radius: 4px;
 }
@@ -185,10 +235,10 @@ input {
     width: 8px;
     height: 14px;
     background: orange;
-    border-radius: 50% 50% 50% 50%;
+    border-radius: 50%;
     box-shadow: 0 0 12px #ffb347;
     display: none;
-    animation: flicker 0.5s infinite alternate;
+    animation: flicker .5s infinite alternate;
 }
 
 @keyframes flicker {
@@ -209,46 +259,85 @@ input {
     background: #f3a4bd;
     border-bottom: 9px solid #d9799d;
     border-radius: 10px;
-    clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%);
+    clip-path: polygon(0 0,100% 25%,100% 100%,0 100%);
 }
 
-.slice:nth-child(2) {
-    transform: translateY(-12px);
-}
+.slice:nth-child(2) { transform: translateY(-12px); }
+.cake-gone { display: none; font-size: 50px; }
 
-.cake-gone {
-    display: none;
-    font-size: 50px;
-}
-
-/* Berotta */
+/* BEROTTA */
 .berotta-img {
     width: 100%;
     max-width: 350px;
     border-radius: 18px;
     margin: 15px auto;
-    transition: opacity 0.6s, transform 0.6s;
+    transition: opacity .6s,transform .6s;
 }
 
 .berotta-gone {
     opacity: 0;
-    transform: scale(0.5);
+    transform: scale(.5);
 }
 
-/* Bruno */
-.bruno-photo {
-    width: 100%;
-    max-width: 440px;
+/* SKINCARE */
+.skincare-box {
+    background: linear-gradient(145deg,#fff0f6,#ffe0ed);
+    border: 2px solid #f7bfd3;
     border-radius: 22px;
-    margin-top: 15px;
-    box-shadow: 0 6px 20px rgba(180,80,120,0.2);
+    padding: 18px 12px;
+    margin-top: 18px;
 }
 
-.bruno-caption {
-    font-size: 18px;
-    color: #d94f83;
+.products {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.product {
+    background: white;
+    border: 1px solid #f4c4d6;
+    border-radius: 18px;
+    padding: 15px 8px;
+    min-height: 145px;
+    box-shadow: 0 4px 12px rgba(180,80,120,.1);
+}
+
+.product-emoji {
+    font-size: 42px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.product-name {
     font-weight: bold;
+    color: #d94f83;
+    font-size: 15px;
+}
+
+.product button {
+    font-size: 12px;
+    padding: 9px 12px;
+    margin: 8px 0 0;
+}
+
+.product-message {
+    background: white;
+    border-radius: 15px;
+    padding: 13px;
     margin-top: 15px;
+    min-height: 55px;
+    color: #b94d78;
+}
+
+.gift-note {
+    background: white;
+    border-radius: 16px;
+    padding: 15px;
+    margin-top: 18px;
+    font-size: 16px;
+    line-height: 1.7;
 }
 
 .footer {
@@ -256,42 +345,57 @@ input {
     font-size: 20px;
     color: #d94f83;
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- PASSWORD SCREEN -->
+<!-- PASSWORD -->
 <div class="container" id="passwordScreen">
     <h1>My dearest Vavveyhh 💗</h1>
     <p>A little surprise is waiting for you...</p>
     <p>Enter your secret password 💌</p>
-
     <input type="password" id="password" placeholder="Your password">
     <br>
     <button onclick="unlock()">Unlock my surprise 💗</button>
-
     <p id="error" style="color:#d94f83;"></p>
 </div>
 
+<!-- PICKUP -->
+<div class="container hidden" id="pickupScreen">
+    <h1>Your ride is here! 🚗💗</h1>
+    <p>Good morning, birthday girl!</p>
+    <p>
+        I've got a little birthday adventure planned for you.
+        Come on, get in! I have some surprises waiting for you. 🥹
+    </p>
 
-<!-- MAIN WEBSITE -->
+    <div class="car-scene">
+        <div class="cloud one">☁️</div>
+        <div class="cloud two">☁️</div>
+        <div class="road"></div>
+        <div class="car" id="pickupCar">🚗</div>
+    </div>
+
+    <button onclick="startJourney()" id="pickupButton">
+        Get in, my girl! 🚗💗
+    </button>
+</div>
+
+<!-- MAIN JOURNEY -->
 <div class="container hidden" id="mainContent">
 
     <h1>My dearest Vavveyhh 💗</h1>
-    <p>Welcome to your little surprise, my girl!</p>
+    <p>Welcome to your little birthday adventure, my girl!</p>
 
     <!-- LETTER -->
     <div class="section">
         <h2>A little letter for you 💌</h2>
         <p>Tap the envelope to open your letter</p>
-
         <div class="envelope" onclick="openLetter()">💌</div>
 
         <div class="letter hidden" id="letter">
             <h2>Happy Birthdayyy! 🎂💗</h2>
-
             <h3>My dearest Vavveyhh 💗</h3>
 
             <p>
@@ -316,18 +420,13 @@ input {
         </div>
     </div>
 
-
     <!-- HER PHOTO -->
     <div class="section">
         <h2>A little surprise for you 💗</h2>
-
-        <button onclick="revealPhoto()">
-            Tap to reveal your picture 💌
-        </button>
+        <button onclick="revealPhoto()">Tap to reveal your picture 💌</button>
 
         <div id="photoReveal" class="hidden">
             <img src="vavveyhh.jpg" alt="A special picture" class="photo">
-
             <h2>Happy b'dayhh my lovee! 💗</h2>
             <h3>My dearest Vavveyhh 💗</h3>
 
@@ -344,28 +443,17 @@ input {
         </div>
     </div>
 
-
-    <!-- BRUNO SECTION -->
+    <!-- BRUNO -->
     <div class="section">
         <h2>And someone special too! 🐶💗</h2>
-
-        <p>
-            A special little moment with you and Bruno!
-        </p>
-
-        <button onclick="showBruno()">
-            Meet Bruno! 🐾
-        </button>
+        <p>A special little moment with you and Bruno!</p>
+        <button onclick="showBruno()">Meet Bruno! 🐾</button>
 
         <div id="brunoReveal" class="hidden">
-            <img src="bruno.jpg"
-                 alt="Vavveyhh and Bruno"
-                 class="bruno-photo">
-
-            <p class="bruno-caption">
+            <img src="bruno.jpg" alt="Vavveyhh and Bruno" class="bruno-photo">
+            <p style="font-size:18px;color:#d94f83;font-weight:bold;">
                 Two of my favourite souls in one picture. 💗🐾
             </p>
-
             <p>
                 Bruno is lucky to have you, and this little
                 moment deserves a special place here! 🥹
@@ -373,28 +461,72 @@ input {
         </div>
     </div>
 
+    <!-- SKINCARE -->
+    <div class="section">
+        <h2>I bought my girl some skincare! 🎀💗</h2>
+        <p>Because my girl deserves a little pampering! 🥹</p>
 
-    <!-- CAKE SECTION -->
+        <div class="skincare-box">
+            <div style="font-size:55px;">🎁</div>
+            <h3 style="color:#d94f83;">A little self-care gift for you!</h3>
+            <p>
+                Open each little gift to see what's inside.
+                I picked these just for you! 💗
+            </p>
+
+            <div class="products">
+                <div class="product">
+                    <span class="product-emoji">🧴</span>
+                    <div class="product-name">Cleanser</div>
+                    <button onclick="showProduct(0)">Open gift 💗</button>
+                </div>
+
+                <div class="product">
+                    <span class="product-emoji">💧</span>
+                    <div class="product-name">Serum</div>
+                    <button onclick="showProduct(1)">Open gift 💗</button>
+                </div>
+
+                <div class="product">
+                    <span class="product-emoji">🫙</span>
+                    <div class="product-name">Moisturiser</div>
+                    <button onclick="showProduct(2)">Open gift 💗</button>
+                </div>
+
+                <div class="product">
+                    <span class="product-emoji">☀️</span>
+                    <div class="product-name">Sunscreen</div>
+                    <button onclick="showProduct(3)">Open gift 💗</button>
+                </div>
+            </div>
+
+            <div class="product-message" id="productMessage">
+                Your little gifts are waiting! 🎀
+            </div>
+
+            <div class="gift-note">
+                You deserve to be pampered and taken care of.
+                Keep glowing, my girl! 💗✨
+            </div>
+
+            <p style="font-size:13px;">
+                A little reminder: your skincare routine,
+                your way. Always take care of yourself! 💕
+            </p>
+        </div>
+    </div>
+
+    <!-- CAKE -->
     <div class="section">
         <h2>Time for your birthday cake! 🎂</h2>
         <p>Every birthday needs a cake, right? 😋</p>
 
         <div class="cake-area">
-
             <div class="cake" id="wholeCake">
                 <div class="cake-top"></div>
-
-                <div class="candle">
-                    <div class="flame"></div>
-                </div>
-
-                <div class="candle">
-                    <div class="flame"></div>
-                </div>
-
-                <div class="candle">
-                    <div class="flame"></div>
-                </div>
+                <div class="candle"><div class="flame"></div></div>
+                <div class="candle"><div class="flame"></div></div>
+                <div class="candle"><div class="flame"></div></div>
             </div>
 
             <div class="cake-cut" id="cakeSlices">
@@ -409,44 +541,62 @@ input {
         <button onclick="lightCandles()">Light the candles 🕯️</button>
         <button onclick="cutCake()">Cut your cake! 🔪</button>
         <button onclick="eatCake()">Eat your cake! 😋</button>
-
         <p id="cakeMessage"></p>
     </div>
 
-
-    <!-- BEROTTA SECTION -->
+    <!-- BEROTTA -->
     <div class="section">
         <h2>And now... something delicious! 😋</h2>
-
         <p>Your special birthday berottaaa! 💗</p>
 
         <img src="berotta.jpg" alt="Birthday berotta"
              class="berotta-img" id="berotta">
 
         <p id="berottaMessage">Tap below to take a bite!</p>
-
         <button onclick="eatBerotta()">Take a bite! 😋</button>
     </div>
 
-
-    <!-- ENDING -->
+    <!-- FINISH JOURNEY -->
     <div class="section">
-        <h2>One last thing... 💗</h2>
-
+        <h2>Had fun on our little adventure? 💗</h2>
         <p>
-            I hope this little surprise made your day
-            a little more special.
+            I hope you enjoyed all your surprises.
+            But wait... let me drop you home safely! 🚗
         </p>
-
-        <h2>Forever us ♾️💗</h2>
+        <button onclick="dropHerHome()">Take me home! 🏡💗</button>
     </div>
 
-    <div class="footer">
-        Made with love ♡
-    </div>
-
+    <div class="footer">Made with love ♡</div>
 </div>
 
+<!-- DROPOFF -->
+<div class="container hidden" id="dropoffScreen">
+    <h1>We're home, my girl! 🏡💗</h1>
+
+    <div class="car-scene">
+        <div class="cloud one">☁️</div>
+        <div class="cloud two">☁️</div>
+        <div class="house">🏡</div>
+        <div class="road"></div>
+        <div class="car" id="homeCar">🚗</div>
+    </div>
+
+    <h2>Hope you enjoyed our little adventure! 🥹</h2>
+
+    <p>
+        I hope every little surprise made you smile.
+        Thank you for making life a little more beautiful.
+    </p>
+
+    <p>
+        Never forget how special you are to me.
+        You deserve all the happiness in the world. 💗
+    </p>
+
+    <h2>Goodnight, my dearest Vavveyhh! 💕</h2>
+    <h1>Forever us ♾️💗</h1>
+    <p>Until our next little adventure... ♡</p>
+</div>
 
 <script>
 
@@ -456,31 +606,57 @@ function unlock() {
 
     if (entered === "said") {
         document.getElementById("passwordScreen").classList.add("hidden");
-        document.getElementById("mainContent").classList.remove("hidden");
+        document.getElementById("pickupScreen").classList.remove("hidden");
     } else {
         document.getElementById("error").innerText =
             "Oops! Try the password again 💗";
     }
 }
 
+// PICKUP JOURNEY
+function startJourney() {
+    const car = document.getElementById("pickupCar");
+    const button = document.getElementById("pickupButton");
+
+    button.disabled = true;
+    button.innerText = "Let's gooo! 💗";
+
+    car.classList.add("drive-away");
+
+    setTimeout(() => {
+        document.getElementById("pickupScreen").classList.add("hidden");
+        document.getElementById("mainContent").classList.remove("hidden");
+        window.scrollTo(0,0);
+    }, 2100);
+}
 
 // LETTER
 function openLetter() {
     document.getElementById("letter").classList.toggle("hidden");
 }
 
-
 // PHOTO
 function revealPhoto() {
     document.getElementById("photoReveal").classList.remove("hidden");
 }
-
 
 // BRUNO
 function showBruno() {
     document.getElementById("brunoReveal").classList.remove("hidden");
 }
 
+// SKINCARE
+const skincareMessages = [
+    "A gentle cleanser for your little self-care routine! 🧴💗",
+    "A little serum gift for your skincare collection! 💧✨",
+    "A moisturiser to keep your skin feeling comfortable and cared for! 🫙💕",
+    "And sunscreen! A little protection for your everyday adventures! ☀️💗"
+];
+
+function showProduct(index) {
+    document.getElementById("productMessage").innerText =
+        skincareMessages[index];
+}
 
 // CAKE
 function lightCandles() {
@@ -509,7 +685,6 @@ function eatCake() {
         "YAYYY! Hope you enjoyed your cakeee! 💗🍰";
 }
 
-
 // BEROTTA
 let bites = 0;
 
@@ -537,12 +712,28 @@ function eatBerotta() {
     }
 }
 
+// DROP HER HOME
+function dropHerHome() {
+    const main = document.getElementById("mainContent");
+    main.classList.add("hidden");
+
+    const dropoff = document.getElementById("dropoffScreen");
+    dropoff.classList.remove("hidden");
+
+    const car = document.getElementById("homeCar");
+    car.classList.add("drive-home");
+
+    window.scrollTo(0,0);
+}
 
 // FLOATING HEARTS
 function createHeart() {
     const heart = document.createElement("div");
     heart.className = "heart";
-    heart.innerHTML = ["💗", "💕", "💖", "💞"][Math.floor(Math.random() * 4)];
+
+    heart.innerHTML = ["💗","💕","💖","💞"][
+        Math.floor(Math.random() * 4)
+    ];
 
     heart.style.left = Math.random() * 100 + "vw";
     heart.style.fontSize = (15 + Math.random() * 20) + "px";
@@ -550,17 +741,15 @@ function createHeart() {
 
     document.body.appendChild(heart);
 
-    setTimeout(() => {
-        heart.remove();
-    }, 10000);
+    setTimeout(() => heart.remove(),10000);
 }
 
-setInterval(createHeart, 700);
+setInterval(createHeart,700);
 
 </script>
-
 </body>
 </html>
+
 
 
 
