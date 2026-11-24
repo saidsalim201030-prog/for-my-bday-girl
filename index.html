@@ -4,205 +4,194 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>For My Birthday Girl 💗</title>
 
 <style>
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  min-height: 100vh;
-  font-family: Georgia, serif;
-  background: linear-gradient(135deg, #ffe0eb, #fff1f6, #f8c4d9);
-  color: #a83e6e;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  overflow-x: hidden;
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #ffd6e7, #ffeaf2, #ffc4dc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    color: #8e3b60;
 }
 
-.container {
-  width: 100%;
-  max-width: 420px;
-  background: rgba(255,255,255,.85);
-  padding: 30px 22px;
-  border-radius: 25px;
-  text-align: center;
-  box-shadow: 0 10px 40px #c96e9940;
-  animation: fadeIn 1s ease;
-  position: relative;
-  z-index: 2;
+.card {
+    background: rgba(255, 255, 255, 0.88);
+    width: 90%;
+    max-width: 430px;
+    padding: 30px 22px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(180, 70, 120, 0.2);
+    position: relative;
+    z-index: 2;
+    margin: 25px 0;
 }
 
 h1 {
-  font-size: 29px;
-  color: #d45d91;
-}
-
-h2 {
-  color: #d45d91;
+    color: #d94f87;
+    font-size: 27px;
+    margin-bottom: 15px;
 }
 
 p {
-  line-height: 1.8;
+    font-size: 16px;
+    line-height: 1.8;
 }
 
 input {
-  width: 100%;
-  padding: 15px;
-  border: 2px solid #f1b5cc;
-  border-radius: 15px;
-  margin: 15px 0;
-  text-align: center;
-  font-size: 17px;
-  outline: none;
-  background: #fffafd;
+    width: 85%;
+    padding: 13px;
+    border: 2px solid #f3a4c4;
+    border-radius: 20px;
+    outline: none;
+    text-align: center;
+    font-size: 16px;
+    margin: 15px 0;
 }
 
 button {
-  border: none;
-  background: #e77da8;
-  color: white;
-  padding: 14px 24px;
-  border-radius: 30px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: .3s;
-}
-
-button:active {
-  transform: scale(.95);
+    background: #e879a7;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 button:hover {
-  background: #cf6191;
+    background: #d94f87;
+    transform: scale(1.04);
 }
 
 .hidden {
-  display: none !important;
+    display: none;
 }
 
-.small {
-  font-size: 13px;
-  color: #bd7795;
-}
-
-/* FLOATING HEARTS */
-
-.heart {
-  position: fixed;
-  bottom: -30px;
-  color: #ed91b5;
-  animation: floatUp 7s linear forwards;
-  pointer-events: none;
-  z-index: 1;
-}
-
-@keyframes floatUp {
-  to {
-    transform: translateY(-110vh) rotate(360deg);
-    opacity: 0;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ENVELOPE */
+/* Envelope */
 
 .envelope-area {
-  margin: 45px auto 30px;
-  width: 220px;
-  height: 155px;
-  position: relative;
-  cursor: pointer;
-  perspective: 800px;
+    margin: 35px auto 20px;
+    cursor: pointer;
+    width: 220px;
+    height: 145px;
+    position: relative;
+    perspective: 800px;
 }
 
 .envelope {
-  width: 220px;
-  height: 140px;
-  position: absolute;
-  bottom: 0;
-  background: #f6a8c5;
-  border-radius: 8px;
-  box-shadow: 0 8px 15px #d98aaa55;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #f6a9c8;
+    border-radius: 8px;
+    overflow: visible;
+    box-shadow: 0 6px 15px rgba(180, 70, 120, 0.2);
 }
 
-/* Front envelope folds */
-
-.envelope:after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: #f9c0d4;
-  clip-path: polygon(0 100%, 50% 48%, 100% 100%);
-  z-index: 2;
+.envelope::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-left: 110px solid #f8c0d5;
+    border-right: 110px solid #f8c0d5;
+    border-top: 75px solid transparent;
+    z-index: 2;
 }
-
-/* Opening flap */
 
 .flap {
-  position: absolute;
-  inset: 0;
-  background: #e982ab;
-  clip-path: polygon(0 0, 100% 0, 50% 58%);
-  transform-origin: top;
-  transition: transform .7s ease;
-  z-index: 4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 110px solid transparent;
+    border-right: 110px solid transparent;
+    border-top: 85px solid #e879a7;
+    transform-origin: top;
+    transition: transform 0.7s;
+    z-index: 3;
 }
 
 .seal {
-  position: absolute;
-  top: 75px;
-  left: 92px;
-  font-size: 30px;
-  z-index: 5;
-  transition: opacity .3s;
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #d94f87;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    font-size: 17px;
 }
 
 .envelope.open .flap {
-  transform: rotateX(180deg);
+    transform: rotateX(180deg);
 }
 
-.envelope.open .seal {
-  opacity: 0;
-}
-
-/* LETTER */
+/* Letter */
 
 .letter {
-  background: #fff8fb;
-  padding: 24px 19px;
-  border-radius: 18px;
-  margin-top: 20px;
-  line-height: 1.9;
-  box-shadow: 0 5px 20px #d98aaa22;
-  animation: fadeIn 1s ease;
-  border: 1px solid #f7d0df;
+    background: #fff5f8;
+    border: 1px solid #f4b5cc;
+    border-radius: 18px;
+    padding: 22px 17px;
+    margin-top: 25px;
+    animation: appear 1s ease;
 }
 
-.letter h2 {
-  color: #df6e9d;
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.footer {
-  margin-top: 25px;
-  font-size: 13px;
-  color: #c17a9a;
+/* Floating hearts */
+
+.heart {
+    position: fixed;
+    bottom: -20px;
+    color: #e879a7;
+    animation: floatUp 6s linear forwards;
+    pointer-events: none;
+    z-index: 1;
 }
 
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    15% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
 </style>
 </head>
 
@@ -210,202 +199,155 @@ button:hover {
 
 <!-- PASSWORD SCREEN -->
 
-<div class="container" id="login">
+<div class="card" id="passwordScreen">
 
-  <h1>Moluyyhh 💗</h1>
+    <h1>My dearest Vavveyhh 💗</h1>
 
-  <p>
-    Someone has prepared something
-    special just for you...
-  </p>
+    <p>
+        Someone has prepared something special just for you...
+        <br>
+        But first, you need the secret password ♡
+    </p>
 
-  <p>
-    But first, you need the secret password ♡
-  </p>
+    <input
+        type="password"
+        id="password"
+        placeholder="Enter the secret password"
+    >
 
-  <input
-    id="password"
-    type="password"
-    placeholder="Enter secret password"
-    onkeydown="if(event.key === 'Enter') unlock()"
-  >
+    <br>
 
-  <button onclick="unlock()">
-    Unlock my surprise 💗
-  </button>
+    <button onclick="unlock()">Unlock 💗</button>
 
-  <p id="error" class="small"></p>
-
-  <p class="small">Made with love ♡</p>
+    <p id="error" style="color:#d94f87;"></p>
 
 </div>
 
 
 <!-- BIRTHDAY SURPRISE SCREEN -->
 
-<div class="container hidden" id="surprise">
+<div class="card hidden" id="surpriseScreen">
 
-  <h1>Moluyyhh 💗</h1>
+    <h1>My dearest Vavveyhh 💗</h1>
 
-  <p>
-    Welcome to your little surprise,
-    my girl!
-  </p>
+    <p>
+        Welcome to your little surprise, my girl!
+    </p>
 
-  <p>
-    I have something special for you...
-  </p>
+    <p>
+        A little something made especially for you ♡
+    </p>
 
-  <h2>💌</h2>
+    <!-- ENVELOPE -->
 
-  <p>
-    Tap the envelope to open your letter!
-  </p>
+    <div class="envelope-area" onclick="openLetter()">
 
-  <div
-    class="envelope-area"
-    onclick="openLetter()"
-  >
-
-    <div class="envelope" id="envelope">
-
-      <div class="flap"></div>
-
-      <div class="seal">💗</div>
+        <div class="envelope" id="envelope">
+            <div class="flap"></div>
+            <div class="seal">♥</div>
+        </div>
 
     </div>
 
-  </div>
-
-  <p class="small">
-    A little letter, just for you ♡
-  </p>
+    <p>Tap the envelope to open your letter 💌</p>
 
 
-  <!-- PERSONAL BIRTHDAY LETTER -->
+    <!-- LETTER -->
 
-  <div class="letter hidden" id="letter">
+    <div class="letter hidden" id="letter">
 
-    <h2>Happy Birthdayyy! 🎂💗</h2>
+        <h1>Happy Birthdayyy! 🎂💗</h1>
 
-    <p>
-      My Moluyyhh,
-      my Vavee Ponneyhh! 💗
-    </p>
+        <p>
+            My dearest Vavveyhh 💗
+        </p>
 
-    <p>
-      Happiest birthday to my girl!
-      I made this little surprise especially
-      for you, hoping it brings a big smile
-      to your face.
-    </p>
+        <p>
+            Happiest birthday to my girl! I made this little
+            surprise especially for you, hoping it brings
+            a big smile to your face.
+        </p>
 
-    <p>
-      You are so special to me, and I hope
-      your birthday is filled with happiness,
-      laughter and beautiful memories.
-    </p>
+        <p>
+            You are so special to me, and I hope your birthday
+            is filled with happiness, laughter and beautiful memories.
+        </p>
 
-    <p>
-      Keep smiling, keep being you,
-      and never forget how special you are.
-    </p>
+        <p>
+            Keep smiling, keep being you, and never forget
+            how special you are to me. 😁
+        </p>
 
-    <h2>Happy Birthday, my girl! 💕</h2>
+        <p>
+            Happy Birthday, my girl! 💕
+        </p>
 
-    <p>
-      With lots of love ♡
-    </p>
+        <p>
+            With lots of love ♡
+        </p>
 
-  </div>
-
-  <div class="footer">
-    Made especially for you 💗
-  </div>
+    </div>
 
 </div>
 
 
 <script>
 
-// PASSWORD CHECK
+// PASSWORD
 
 function unlock() {
 
-  const password =
-    document.getElementById("password").value;
+    const password = document.getElementById("password").value;
 
-  if (password.toLowerCase() === "said") {
+    if (password.toLowerCase() === "said") {
 
-    document.getElementById("login")
-      .classList.add("hidden");
+        document.getElementById("passwordScreen").classList.add("hidden");
 
-    document.getElementById("surprise")
-      .classList.remove("hidden");
+        document.getElementById("surpriseScreen").classList.remove("hidden");
 
-  } else {
+    } else {
 
-    document.getElementById("error")
-      .textContent =
-      "Wrong password! Try again, ponneyh 💗";
+        document.getElementById("error").innerText =
+            "Oops! That's not the right password 💗";
 
-  }
-
+    }
 }
 
 
-// OPEN ENVELOPE
+// OPEN LETTER
 
 function openLetter() {
 
-  const envelope =
-    document.getElementById("envelope");
-
-  const letter =
-    document.getElementById("letter");
-
-  if (letter.classList.contains("hidden")) {
+    const envelope = document.getElementById("envelope");
+    const letter = document.getElementById("letter");
 
     envelope.classList.add("open");
 
     setTimeout(function() {
-
-      letter.classList.remove("hidden");
-
+        letter.classList.remove("hidden");
     }, 500);
-
-  }
 
 }
 
 
-// FLOATING HEART ANIMATION
+// FLOATING HEARTS
 
 function createHeart() {
 
-  const heart =
-    document.createElement("div");
+    const heart = document.createElement("div");
 
-  heart.className = "heart";
+    heart.className = "heart";
+    heart.innerHTML = "💗";
 
-  heart.innerHTML = "♥";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (15 + Math.random() * 20) + "px";
+    heart.style.animationDuration = (4 + Math.random() * 4) + "s";
 
-  heart.style.left =
-    Math.random() * 100 + "vw";
+    document.body.appendChild(heart);
 
-  heart.style.fontSize =
-    (15 + Math.random() * 20) + "px";
-
-  heart.style.animationDuration =
-    (5 + Math.random() * 5) + "s";
-
-  document.body.appendChild(heart);
-
-  setTimeout(function() {
-
-    heart.remove();
-
-  }, 10000);
+    setTimeout(function() {
+        heart.remove();
+    }, 8000);
 
 }
 
@@ -415,3 +357,4 @@ setInterval(createHeart, 700);
 
 </body>
 </html>
+
