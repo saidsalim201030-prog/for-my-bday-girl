@@ -15,7 +15,7 @@
 body {
     margin: 0;
     min-height: 100vh;
-    font-family: 'Georgia', serif;
+    font-family: Georgia, serif;
     background: linear-gradient(135deg, #ffd6e7, #ffeaf2, #ffc4dc);
     display: flex;
     justify-content: center;
@@ -25,13 +25,13 @@ body {
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.88);
+    background: rgba(255,255,255,0.9);
     width: 90%;
     max-width: 430px;
     padding: 30px 22px;
     border-radius: 25px;
     text-align: center;
-    box-shadow: 0 10px 35px rgba(180, 70, 120, 0.2);
+    box-shadow: 0 10px 35px rgba(180,70,120,0.2);
     position: relative;
     z-index: 2;
     margin: 25px 0;
@@ -41,6 +41,10 @@ h1 {
     color: #d94f87;
     font-size: 27px;
     margin-bottom: 15px;
+}
+
+h2 {
+    color: #d94f87;
 }
 
 p {
@@ -63,11 +67,12 @@ button {
     background: #e879a7;
     color: white;
     border: none;
-    padding: 12px 28px;
+    padding: 12px 25px;
     border-radius: 25px;
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
+    margin: 5px;
 }
 
 button:hover {
@@ -76,10 +81,10 @@ button:hover {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
-/* Envelope */
+/* ENVELOPE */
 
 .envelope-area {
     margin: 35px auto 20px;
@@ -97,7 +102,7 @@ button:hover {
     background: #f6a9c8;
     border-radius: 8px;
     overflow: visible;
-    box-shadow: 0 6px 15px rgba(180, 70, 120, 0.2);
+    box-shadow: 0 6px 15px rgba(180,70,120,0.2);
 }
 
 .envelope::before {
@@ -139,14 +144,13 @@ button:hover {
     justify-content: center;
     align-items: center;
     z-index: 4;
-    font-size: 17px;
 }
 
 .envelope.open .flap {
     transform: rotateX(180deg);
 }
 
-/* Letter */
+/* LETTER */
 
 .letter {
     background: #fff5f8;
@@ -168,7 +172,74 @@ button:hover {
     }
 }
 
-/* Floating hearts */
+/* PHOTO REVEAL */
+
+.photo-section {
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px dashed #f3a4c4;
+}
+
+.photo-frame {
+    margin: 25px auto;
+    padding: 8px;
+    max-width: 280px;
+    background: white;
+    border: 3px solid #f3a4c4;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(217,79,135,0.25);
+}
+
+.photo-frame img {
+    width: 100%;
+    display: block;
+    border-radius: 14px;
+}
+
+.photo-reveal-animation {
+    animation: photoAppear 1.2s ease;
+}
+
+@keyframes photoAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.65) rotate(-5deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+
+.birthday-text {
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #ffc1d9;
+    }
+    to {
+        text-shadow: 0 0 18px #e879a7;
+    }
+}
+
+.big-heart {
+    font-size: 45px;
+    animation: heartbeat 1s infinite;
+    margin-top: 15px;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* FLOATING HEARTS */
 
 .heart {
     position: fixed;
@@ -192,6 +263,7 @@ button:hover {
         opacity: 0;
     }
 }
+
 </style>
 </head>
 
@@ -224,7 +296,7 @@ button:hover {
 </div>
 
 
-<!-- BIRTHDAY SURPRISE SCREEN -->
+<!-- BIRTHDAY SURPRISE -->
 
 <div class="card hidden" id="surpriseScreen">
 
@@ -238,13 +310,17 @@ button:hover {
         A little something made especially for you ♡
     </p>
 
+
     <!-- ENVELOPE -->
 
     <div class="envelope-area" onclick="openLetter()">
 
         <div class="envelope" id="envelope">
+
             <div class="flap"></div>
+
             <div class="seal">♥</div>
+
         </div>
 
     </div>
@@ -288,6 +364,55 @@ button:hover {
 
     </div>
 
+
+    <!-- SECRET PHOTO REVEAL -->
+
+    <div class="photo-section">
+
+        <h2>One more little surprise 💗</h2>
+
+        <p>
+            There's someone very special I want you to see...
+        </p>
+
+        <button onclick="revealPhoto()">
+            Tap to reveal your picture 💌
+        </button>
+
+        <div id="photoReveal" class="hidden">
+
+            <div class="photo-frame photo-reveal-animation">
+
+                <img
+                    src="vavveyhh.jpg"
+                    alt="My dearest Vavveyhh"
+                >
+
+            </div>
+
+            <h1 class="birthday-text">
+                Happy b'dayhh my lovee! 💗
+            </h1>
+
+            <h2>My dearest Vavveyhh 💗</h2>
+
+            <p>
+                No matter where life takes us, I hope we keep
+                choosing each other, making memories and
+                smiling together.
+            </p>
+
+            <p>
+                Here's to us, today and always.
+                Our love story has no ending. ♾️💗
+            </p>
+
+            <div class="big-heart">💗</div>
+
+        </div>
+
+    </div>
+
 </div>
 
 
@@ -311,6 +436,7 @@ function unlock() {
             "Oops! That's not the right password 💗";
 
     }
+
 }
 
 
@@ -330,6 +456,26 @@ function openLetter() {
 }
 
 
+// REVEAL PHOTO
+
+function revealPhoto() {
+
+    const photo = document.getElementById("photoReveal");
+
+    photo.classList.remove("hidden");
+
+    photo.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+    for (let i = 0; i < 20; i++) {
+        setTimeout(createHeart, i * 120);
+    }
+
+}
+
+
 // FLOATING HEARTS
 
 function createHeart() {
@@ -340,8 +486,12 @@ function createHeart() {
     heart.innerHTML = "💗";
 
     heart.style.left = Math.random() * 100 + "vw";
-    heart.style.fontSize = (15 + Math.random() * 20) + "px";
-    heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+    heart.style.fontSize =
+        (15 + Math.random() * 20) + "px";
+
+    heart.style.animationDuration =
+        (4 + Math.random() * 4) + "s";
 
     document.body.appendChild(heart);
 
@@ -357,4 +507,5 @@ setInterval(createHeart, 700);
 
 </body>
 </html>
+
 
